@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="banner">
+        <div class="banner-content">
+            <div class="profile-section">
+                <img src="data/pfp.png" alt="Profile" class="profile-image">
+                <div class="profile-info">
+                    <h1 class="name">Mike Jomari Rivera</h1>
+                    <div class="tags">
+                        <span class="tag">Jr. Web Developer</span>
+                        <span class="tag">UI/UX Designer</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-button">
+                            <i class="fas fa-file-download"></i> Resume
+                        </a>
+                        <a href="#" class="social-button">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" class="social-button">
+                            <i class="fab fa-dribbble"></i> Dribbble
+                        </a>
+                        <a href="#" class="social-button">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto">
+        <!-- Main Banner Section -->
+        <div class="note-paper mb-8" id="home">
+            <div class="banner-stripe">
+                <div class="nav-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="text-sm">profile.txt</div>
+            </div>
+            <div class="p-6 pb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                    <!-- About Card -->
+                    <div class="rounded-2xl shadow-lg bg-gradient-to-br from-green-100 to-blue-50 p-6 flex flex-col min-h-[220px]">
+                        <h2 class="text-lg font-bold mb-2 text-green-900 flex items-center gap-2"><i class="fas fa-user-astronaut"></i> About</h2>
+                        <p class="text-green-800 text-sm leading-relaxed">
+                            Passionate designer-developer hybrid with 5+ years of experience creating intuitive digital experiences. I specialize in bridging the gap between beautiful design and functional implementation. Currently helping companies build better products at Pixel & Code.
+                        </p>
+                    </div>
+                    <!-- Education Card -->
+                    <div class="rounded-2xl shadow-lg bg-gradient-to-br from-yellow-100 to-amber-50 p-6 flex flex-col min-h-[220px]">
+                        <h2 class="text-lg font-bold mb-2 text-yellow-900 flex items-center gap-2"><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="font-medium">Rochester Institute of Technology</p>
+                                <p class="text-xs text-yellow-800">MS in Human-Computer Interaction</p>
+                                <p class="text-xs text-yellow-600">2016 - 2018</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">University of Washington</p>
+                                <p class="text-xs text-yellow-800">BA in Design</p>
+                                <p class="text-xs text-yellow-600">2011 - 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience Card -->
+                    <div class="rounded-2xl shadow-lg bg-gradient-to-br from-pink-100 to-rose-50 p-6 flex flex-col min-h-[220px]">
+                        <h2 class="text-lg font-bold mb-2 text-pink-900 flex items-center gap-2"><i class="fas fa-briefcase"></i> Experience</h2>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="font-medium">Pixel & Code</p>
+                                <p class="text-xs text-pink-800">Senior UX Designer</p>
+                                <p class="text-xs text-pink-600">2020 - Present</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Creative Solutions Inc.</p>
+                                <p class="text-xs text-pink-800">UI/UX Designer</p>
+                                <p class="text-xs text-pink-600">2018 - 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Services Offered -->
+        <div class="note-paper mb-8" id="services">
+            <div class="banner-stripe">
+                <div class="nav-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="text-sm">services.txt</div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-6">What I Can Do For You</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 dark:bg-blue-900">
+                            <i class="fas fa-laptop-code text-blue-600 text-xl dark:text-blue-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">UI/UX Design</h3>
+                        <p class="service-desc">
+                            Creating intuitive and beautiful user interfaces with a focus on user experience principles and accessibility.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4 dark:bg-purple-900">
+                            <i class="fas fa-code text-purple-600 text-xl dark:text-purple-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Frontend Development</h3>
+                        <p class="service-desc">
+                            Implementing designs with clean, efficient code using modern frameworks like React and Vue.js.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4 dark:bg-amber-900">
+                            <i class="fas fa-mobile-alt text-amber-600 text-xl dark:text-amber-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Mobile Design</h3>
+                        <p class="service-desc">
+                            Designing responsive mobile experiences that work seamlessly across all device sizes.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 dark:bg-green-900">
+                            <i class="fas fa-search text-green-600 text-xl dark:text-green-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">User Research</h3>
+                        <p class="service-desc">
+                            Conducting studies and usability tests to gather insights that inform the design process.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4 dark:bg-red-900">
+                            <i class="fas fa-bullseye text-red-600 text-xl dark:text-red-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Branding</h3>
+                        <p class="service-desc">
+                            Developing cohesive brand identities that communicate values and connect with audiences.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mb-4 dark:bg-pink-900">
+                            <i class="fas fa-chart-line text-pink-600 text-xl dark:text-pink-300"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Product Strategy</h3>
+                        <p class="service-desc">
+                            Helping define product vision, roadmap, and goals based on market and user research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projects Section -->
+        <div class="note-paper" id="projects">
+            <div class="banner-stripe">
+                <div class="nav-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="text-sm">projects.txt</div>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold">Selected Work</h2>
+                    <div class="flex gap-2 overflow-x-auto scrollbar-hide py-2 px-1 -mx-1">
+                        <button class="filter-btn px-4 py-1 text-sm active min-w-[90px]" data-filter="all">All</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="web">Web</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="desktop">Desktop</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="mobile">Mobile</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="wordpress">WordPress</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="templates">Templates</button>
+                        <button class="filter-btn px-4 py-1 text-sm min-w-[90px]" data-filter="design">Design</button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-container">
+                    <!-- Projects will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="#home" class="active tooltip" data-tip="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#services" class="tooltip" data-tip="Services">
+            <i class="fas fa-cog"></i>
+        </a>
+        <a href="#projects" class="tooltip" data-tip="Projects">
+            <i class="fas fa-folder"></i>
+        </a>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="dark-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
