@@ -193,19 +193,89 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Navigation functionality
-const navLinks = document.querySelectorAll('.bottom-nav a');
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        
-        const targetId = link.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
+// Navigation functionality with scroll-based highlighting
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.bottom-nav a');
+    
+    // Handle click events for smooth scrolling
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get the target section
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                // Scroll to the section smoothly
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active state
+                navLinks.forEach(link => link.classList.remove('active'));
+                link.classList.add('active');
+            }
         });
     });
+    
+    // Set active nav link based on scroll position
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('#home, #services, #projects');
+        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        
+        // Add some buffer for better detection near the bottom
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+        const scrollBottom = scrollPosition + windowHeight;
+        const nearBottom = documentHeight - scrollBottom < 100;
+        
+        // Automatically highlight the projects section when near the bottom
+        if (nearBottom) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const projectsLink = document.querySelector('.bottom-nav a[href="#projects"]');
+            if (projectsLink) projectsLink.classList.add('active');
+            return;
+        }
+        
+        // Find the current section in view
+        let currentSection = null;
+        
+        sections.forEach(section => {
+            // Get section dimensions
+            const sectionTop = section.offsetTop - 100; // Add offset for better detection
+            const sectionHeight = section.clientHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+            
+            // Check if the section is in view
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                currentSection = section;
+            }
+        });
+        
+        // If no section is found but we're near the top, highlight home
+        if (!currentSection && scrollPosition < 300) {
+            currentSection = document.querySelector('#home');
+        }
+        
+        // Update the active state
+        if (currentSection) {
+            const currentId = currentSection.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', updateActiveNav);
+    
+    // Initialize active nav on page load
+    updateActiveNav();
 });
 
 // Dark mode toggle
@@ -221,26 +291,4 @@ darkModeToggle.addEventListener('click', () => {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
     }
-});
-
-// Set active nav link based on scroll position
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('div[id]');
-    let currentSection = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (pageYOffset >= (sectionTop - 150)) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
 });
