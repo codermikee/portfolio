@@ -109,6 +109,7 @@ function renderProjects(filter = 'all') {
         
         const projectCard = document.createElement('div');
         projectCard.className = `project-card p-5 bg-white border-l-4 ${categoryColor.border} hover:border-opacity-100 shadow-sm hover:shadow-md transition cursor-pointer dark:bg-gray-800`;
+        projectCard.setAttribute('data-categories', category);
         
         projectCard.innerHTML = `
             <img src="${image}" alt="${title}" class="project-image">
@@ -137,14 +138,58 @@ function renderProjects(filter = 'all') {
 // Initial render
 renderProjects();
 
-// Filter functionality
-const filterBtns = document.querySelectorAll('.filter-btn');
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        renderProjects(filter);
+// JavaScript for the project filter dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButton = document.querySelector('.filter-button');
+    const filterDropdown = document.querySelector('.filter-dropdown');
+    const filterOptions = document.querySelectorAll('.filter-option');
+    
+    // Toggle dropdown when filter button is clicked
+    if (filterButton) {
+        filterButton.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default button action
+            filterButton.classList.toggle('active');
+            filterDropdown.classList.toggle('show');
+        });
+    }
+    
+    // Update the filter option selection handler
+    filterOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove selected class from all options
+            filterOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            // Add selected class to clicked option
+            option.classList.add('selected');
+            
+            // Update the filter button text, preserving only the text content (not the icon)
+            if (filterButton && filterButton.querySelector('span')) {
+                // Get text without the icon
+                const optionText = option.textContent.trim();
+                filterButton.querySelector('span').textContent = optionText;
+            }
+            
+            // Get the filter category
+            const filter = option.getAttribute('data-filter');
+            
+            // Filter the projects
+            renderProjects(filter);
+            
+            // Hide dropdown after selection
+            filterDropdown.classList.remove('show');
+            filterButton.classList.remove('active');
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.filter-container') && 
+            filterDropdown && 
+            filterDropdown.classList.contains('show')) {
+            
+            filterDropdown.classList.remove('show');
+            filterButton.classList.remove('active');
+        }
     });
 });
 
