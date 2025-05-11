@@ -1,98 +1,118 @@
 // Project data
- const projects = [
-    {
-        title: "E-commerce Redesign",
-        description: "Complete overhaul of online shopping experience with focus on conversion optimization.",
-        category: "web",
-        year: "2022",
+const projects = [
+     {
+        title: "AdU - Guide N' Go",
+        description: "Created as an output for our thesis; A chatbot system that provides answers to frequently asked questions about the university via Forward Neural Networks and Levenshtein Distance Algorithm as its fallback. It uses the univeristy's handbook as its training data. <br><br> NOTE: In this demo, the training data is not included due to privacy concerns. For an actual demo, please contact me.",
+        category: "Web App",
         link: "#",
-        image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["React", "Node.js", "MongoDB", "TailwindCSS"],
-        icon: "fas fa-shopping-cart"
+        image: "", 
+        tags: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     },
     {
-        title: "Fitness Mobile App",
-        description: "iOS and Android app helping users track workouts and nutrition plans.",
-        category: "mobile",
-        year: "2021",
+        title: "Miroma Catalogue",
+        description: "Simulates an Inventory Management System with user authentication.",
+        category: "Web App",
         link: "#",
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["React Native", "Firebase", "Python"],
-        icon: "fas fa-dumbbell"
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     },
     {
-        title: "Corporate Brand Identity",
-        description: "Brand guidelines, logo system, and visual language for tech startup.",
-        category: "design",
-        year: "2020",
+        title: "TOY RAID!",
+        description: "A simple CRM system with user authentication and data management.",
+        category: "Web App",
         link: "#",
-        image: "https://images.unsplash.com/photo-1516937948344-463b4d161307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["Illustrator", "Photoshop", "Figma", "XD"],
-        icon: "fas fa-palette"
+        image: "", 
+        tags: ["HTML", "CSS", "Django", "Bootstrap", "MySQL"],
     },
     {
-        title: "Dashboard UX",
-        description: "Analytics dashboard redesign with improved data visualization components.",
-        category: "desktop",
-        year: "2021",
+        title: "Barangay Management System",
+        description: "A basic CRUD system for managing barangay data.",
+        category: "Desktop App",
         link: "#",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["Figma", "JavaScript", "D3.js"],
-        icon: "fas fa-chart-pie"
+        image: "", 
+        tags: ["Java", "MySQL"],
     },
     {
-        title: "Travel Booking Website",
-        description: "Responsive website frontend for hotel and flight booking platform.",
-        category: "wordpress",
-        year: "2022",
+        title: "ForgetMeNot",
+        description: "An event planner and basic note-taking app that serves to handle your most important moments!",
+        category: "Mobile App",
         link: "#",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["Vue.js", "PHP", "MySQL", "CSS"],
-        icon: "fas fa-plane"
+        image: "", 
+        tags: ["Flutter", "MySQL"],
     },
     {
-        title: "Health Tracking App UI",
-        description: "User interface design for medical symptom tracking application.",
-        category: "templates",
-        year: "2023",
+        title: "Mike's Note App",
+        description: "I wanted to create a simple note-taking app that I can actually use on the daily. So I created this app.",
+        category: "Passion Project",
         link: "#",
-        image: "https://images.unsplash.com/photo-1485216983937-749292830fcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        tags: ["Swift", "Figma", "Firebase"],
-        icon: "fas fa-heartbeat"
-    }
+        image: "", 
+        tags: ["Flutter", "MySQL"],
+    },
+    {
+        title: "Mike's Music Player",
+        description: "I wanted to have a granular control over my music library and theme so I created this music player.",
+        category: "Passion Project",
+        link: "#",
+        image: "", 
+        tags: ["Flutter", "MySQL"],
+    },
+    {
+        title: "Basic Portfolio Template 1",
+        description: "A simple, dark-themed portfolio that can be customized.",
+        category: "Templates",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    },
+    {
+        title: "Basic Portfolio Template 2",
+        description: "A simple, coffee-themed portfolio that can be customized.",
+        category: "Templates",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    },
+    {
+        title: "Basic Portfolio Template 3",
+        description: "A simple, custom-themed portfolio that can be customized.",
+        category: "Templates",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    },
+    {
+        title: "Dashboard Template",
+        description: "Clean dashboard template with both admin and user views.",
+        category: "Templates",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "React", "TailwindCSS", "MySQL"],
+    },
+    {
+        title: "Login Template",
+        description: "A simple, login and sign up page that can be used for your projects.",
+        category: "Templates",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    },
+    {
+        title: "JavaScript Training 1",
+        description: "Created as a training project for JavaScript. It is a simple web app.",
+        category: "Basic Training Project",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        title: "JavaScript Training 2",
+        description: "Created as a training project for JavaScript. It is a simple web app.",
+        category: "Basic Training Project",
+        link: "#",
+        image: "", 
+        tags: ["HTML", "CSS", "JavaScript"],
+    },
 ];
-
-// Tag color mapping
-const tagColors = {
-    "React": "react-tag",
-    "React Native": "react-tag",
-    "Node.js": "js-tag",
-    "JavaScript": "js-tag",
-    "Vue.js": "vue-tag",
-    "Python": "python-tag",
-    "PHP": "php-tag",
-    "MongoDB": "html-tag",
-    "MySQL": "html-tag",
-    "Firebase": "js-tag",
-    "TailwindCSS": "css-tag",
-    "CSS": "css-tag",
-    "Figma": "figma-tag",
-    "Illustrator": "html-tag",
-    "Photoshop": "html-tag",
-    "XD": "xd-tag", 
-    "D3.js": "js-tag",
-    "Swift": "react-tag"
-};
-
-// Category colors mapping
-const categoryColors = {
-    web: { text: 'text-blue-600', bg: 'bg-blue-100', border: 'border-blue-500', darkText: 'dark:text-blue-300', darkBg: 'dark:bg-blue-900' },
-    desktop: { text: 'text-cyan-700', bg: 'bg-cyan-100', border: 'border-cyan-500', darkText: 'dark:text-cyan-300', darkBg: 'dark:bg-cyan-900' },
-    mobile: { text: 'text-purple-600', bg: 'bg-purple-100', border: 'border-purple-500', darkText: 'dark:text-purple-300', darkBg: 'dark:bg-purple-900' },
-    wordpress: { text: 'text-green-700', bg: 'bg-green-100', border: 'border-green-500', darkText: 'dark:text-green-300', darkBg: 'dark:bg-green-900' },
-    templates: { text: 'text-pink-700', bg: 'bg-pink-100', border: 'border-pink-500', darkText: 'dark:text-pink-300', darkBg: 'dark:bg-pink-900' },
-    design: { text: 'text-amber-600', bg: 'bg-amber-100', border: 'border-amber-500', darkText: 'dark:text-amber-300', darkBg: 'dark:bg-amber-900' }
-};
 
 // Function to render projects
 function renderProjects(filter = 'all') {
@@ -104,30 +124,28 @@ function renderProjects(filter = 'all') {
         : projects.filter(project => project.category === filter);
     
     filteredProjects.forEach(project => {
-        const { title, description, category, year, link, image, tags, icon } = project;
-        const categoryColor = categoryColors[category];
+        const { title, description, category, link, image, tags } = project;
         
         const projectCard = document.createElement('div');
-        projectCard.className = `project-card p-5 bg-white border-l-4 ${categoryColor.border} hover:border-opacity-100 shadow-sm hover:shadow-md transition cursor-pointer dark:bg-gray-800`;
+        projectCard.className = `project-card border-l-4 border-gray-700 hover:border-gray-500 shadow-sm hover:shadow-md transition cursor-pointer`;
         projectCard.setAttribute('data-categories', category);
         
+        const imageSrc = image || 'data/project-placeholder.jpg'; // Create a placeholder image in your data folder
+        
         projectCard.innerHTML = `
-            <img src="${image}" alt="${title}" class="project-image">
+            <img src="${imageSrc}" alt="${title}" class="project-image">
             <div class="flex justify-between items-start mb-2">
-                <span class="px-3 py-1 ${categoryColor.bg} ${categoryColor.darkBg} ${categoryColor.text} ${categoryColor.darkText} rounded-full text-xs font-medium">${category.charAt(0).toUpperCase() + category.slice(1)}</span>
-                <span class="text-xs text-gray-400">${year}</span>
+                <span class="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-xs font-medium">${category.charAt(0).toUpperCase() + category.slice(1)}</span>
             </div>
-            <h3 class="text-lg font-bold mb-2 dark:text-white">${title}</h3>
-            <p class="text-gray-700 text-sm mb-3 dark:text-gray-300">${description}</p>
+            <h3 class="text-lg font-bold mb-2">${title}</h3>
+            <p class="text-sm mb-3">${description}</p>
             <div class="flex flex-wrap mb-4">
                 ${tags.map(tag => {
-                    const tagClass = tagColors[tag] || 'html-tag';
-                    return `<span class="tool-tag ${tagClass}">${tag}</span>`;
+                    return `<span class="tool-tag">${tag}</span>`;
                 }).join('')}
             </div>
-            <div class="flex justify-between items-center">
-                <i class="${icon} ${categoryColor.text} ${categoryColor.darkText}"></i>
-                <a href="${link}" class="text-gray-500 hover:text-black transition dark:hover:text-white">View Project →</a>
+            <div class="flex justify-end items-center">
+                <a href="${link}" class="text-gray-500 hover:text-white transition">View Project →</a>
             </div>
         `;
         
@@ -278,17 +296,3 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveNav();
 });
 
-// Dark mode toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const icon = darkModeToggle.querySelector('i');
-    
-    if (document.body.classList.contains('dark')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    }
-});

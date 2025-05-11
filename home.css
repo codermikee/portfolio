@@ -61,10 +61,9 @@ h1, h2, h3, .section-title, .filter-button span {
 
 .project-card {
     background: #181a1b;
-    border-bottom: 4px solid #35355a;
+    border-left-color: #5c715e;
     box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     color: #e0e0f0;
-    border-radius: 10px;
     transition: all 0.2s cubic-bezier(.4,0,.2,1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -72,8 +71,8 @@ h1, h2, h3, .section-title, .filter-button span {
 
 .project-card:hover {
     box-shadow: 0 8px 32px rgba(0,0,0,0.32);
-    background: #18182b;
-    border-left-color: #5c715e;
+    background: #0d1310;
+    border-left-color: #aad3ae;
     transform: translateY(-4px) scale(1.01);
 }
 
@@ -239,6 +238,7 @@ h1, h2, h3, .section-title, .filter-button span {
     gap: 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.377);
     z-index: 100;
+    border: 3px solid #8fa998; /* Green border */
 }
 
 .bottom-nav a {
@@ -262,6 +262,7 @@ h1, h2, h3, .section-title, .filter-button span {
 .bottom-nav a.active {
     color: #f7fffa; /* Green color for the active icon */
     border-radius: 30px;
+    border-bottom: 3px solid #8fa998; /* Green underline */
     background-color: #222c24;
     transform: translateY(-4px);
 }
@@ -383,7 +384,7 @@ button.bg-black:hover {
     position: relative;
     padding-top: 40px; /* Reduced further to 40px */
     padding-bottom: 40px;
-    background: #181a1b;
+    background: #000000;
     color: #f0f0f0;
     border-bottom: 5px solid #232324;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -494,7 +495,7 @@ button.bg-black:hover {
 }
 
 .tag {
-    background-color: #232324;
+    background-color: #2323249a;
     color: #e0e0e0;
     border-radius: 30px;
     border: 2px solid #333436;
@@ -515,13 +516,14 @@ button.bg-black:hover {
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
     background-color: #232324;
     color: #e0e0e0;
     border: 2px solid #333436;
+    border-bottom: 3px solid #8fa998;
 }
 
 .social-button:hover {
