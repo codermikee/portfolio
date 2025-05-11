@@ -790,8 +790,6 @@ button.bg-black:hover {
     }
 }
 
-/* Fix potential conflicts with Tailwind that might override fonts */
-.name,
 .skill-title,
 .section-title,
 h1, h2, h3 {
@@ -800,6 +798,7 @@ h1, h2, h3 {
 
 body, 
 p, 
+.name,
 .about-bio p, 
 .skill-pill, 
 .detail-subtitle, 
