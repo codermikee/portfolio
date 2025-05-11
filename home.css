@@ -652,6 +652,74 @@ button.bg-black:hover {
     }
 }
 
+/* Mobile-friendly font size adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .name {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+}
+
+/* Skills table mobile optimization */
+@media (max-width: 768px) {
+    .skills-table {
+        margin: 0.75rem 0;
+    }
+    
+    .skill-items {
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-pill {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-title {
+        font-size: 0.8rem;
+        margin: 0.6rem 0 0.4rem 0;
+    }
+    
+    .skill-items {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .skill-pill {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.7rem;
+        max-width: fit-content;
+    }
+    
+    .skill-pill i {
+        font-size: 0.9rem;
+    }
+}
+
 /* About Section Styles */
 .about-section {
     padding: 1rem 0;
