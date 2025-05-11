@@ -720,6 +720,94 @@ button.bg-black:hover {
     }
 }
 
+/* Fix for skill pills in mobile view */
+.skill-pill {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+    color: #e6e6e6;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.skill-pill:hover {
+    background-color: rgba(143, 188, 143, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-color: rgba(143, 188, 143, 0.3);
+}
+
+/* Ensure mobile views use the correct fonts */
+@media (max-width: 768px) {
+    body, 
+    p, 
+    .about-bio p, 
+    .skill-pill, 
+    .detail-subtitle, 
+    .detail-period, 
+    .service-content p, 
+    .project-card p, 
+    .project-card .tool-tag, 
+    .tag {
+        font-family: 'JetBrains Mono', monospace !important;
+    }
+    
+    /* Maintain proper styling for skill pills on mobile */
+    .skill-pill {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 0.2rem 0.6rem;
+        border-radius: 20px;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 0.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-pill {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 20px !important;
+        padding: 0.15rem 0.5rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.3rem !important;
+        max-width: fit-content !important;
+        margin-bottom: 0.3rem !important;
+        font-family: 'JetBrains Mono', monospace !important;
+    }
+    
+    .skill-items {
+        gap: 0.4rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+/* Fix potential conflicts with Tailwind that might override fonts */
+.name,
+.skill-title,
+.section-title,
+h1, h2, h3 {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
+body, 
+p, 
+.about-bio p, 
+.skill-pill, 
+.detail-subtitle, 
+.detail-period, 
+.service-content p {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
 /* About Section Styles */
 .about-section {
     padding: 1rem 0;
