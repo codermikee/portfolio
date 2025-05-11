@@ -1,20 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
         
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     background: linear-gradient(to right, #000000, #434343);
     color: #f0f0f0;
-    overflow-x: hidden; /* Added to prevent overflow */
-    margin: 0; /* Ensure no default margins cause scrolling */
-    padding: 0; /* Ensure no default padding cause scrolling */
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0; 
+}
+
+h1, h2, h3, .section-title, .filter-button span {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Specific styling for the name in the banner */
+.name {
+    color: #bfcfc2;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .note-paper {
-    background: #1e1e1e;
-    color: #f0f0f0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Updated project header and filter positioning */
@@ -64,6 +79,11 @@ body {
 
 .project-card h3 {
     color: #8fa998;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.project-card p, .project-card .tool-tag {
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .project-card .tool-tag {
@@ -201,8 +221,8 @@ body {
 .section-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #f0f0f0;
-    margin: 0;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /* Bottom navigation styling with green active highlight */
@@ -211,7 +231,7 @@ body {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(30, 30, 30, 0.85);
+    background: rgb(12, 12, 12);
     backdrop-filter: blur(8px);
     border-radius: 50px;
     display: flex;
@@ -343,17 +363,6 @@ button.bg-black:hover {
     transform: scale(1.02);
 }
 
-.tool-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    background-color: #374151;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    transition: all 0.2s ease;
-}
-
 .python-tag { color: #3776ab; }
 .js-tag { color: #f0db4f; }
 .react-tag { color: #61dbfb; }
@@ -364,43 +373,7 @@ button.bg-black:hover {
 .xd-tag { color: #ff61f6; }
 .php-tag { color: #777bb4; }
 
-/* Service Card Styles */
-.service-card {
-    background: #181a1b;
-    color: #e0e0e0;
-    border-left: 4px solid #232324;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    padding: 2rem 1.5rem;
-    margin-bottom: 2rem;
-    transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
-}
 
-.service-card:hover {
-    border-left-color: #333436;
-    background: #232324;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.32);
-}
-
-.service-card h3 {
-    color: #e0e0e0;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.service-card .service-icon {
-    color: #e0e0e0;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-}
-
-.service-card .service-desc {
-    color: #b0b0b0;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Updated Banner Styles - Reduced top padding */
 .banner {
     width: 100%;
     left: 0;
@@ -520,18 +493,13 @@ button.bg-black:hover {
     border-radius: 15px;
 }
 
-.name {
-    color: #bfcfc2;
-    margin-bottom: 10px;
-    font-size: 2.5rem;
-}
-
 .tag {
     background-color: #232324;
     color: #e0e0e0;
     border-radius: 30px;
     border: 2px solid #333436;
     padding: 4px 15px;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 /* Social Links */
@@ -684,7 +652,6 @@ button.bg-black:hover {
     }
 }
 
-
 /* About Section Styles */
 .about-section {
     padding: 1rem 0;
@@ -700,13 +667,14 @@ button.bg-black:hover {
 .section-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #bfcfc2;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .section-line {
     flex: 1;
     height: 2px;
-    background: linear-gradient(to right, #8fa998, transparent);
+    background: linear-gradient(to right, #8fbcb5, #2a5c6b);
 }
 
 .about-content {
@@ -719,10 +687,11 @@ button.bg-black:hover {
     text-align: justify;
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #e0e0e0;
+    color: #e6e6e6;
     max-width: 90%;
     border-left: 3px solid #8fa998;
     padding-left: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .about-details {
@@ -766,6 +735,11 @@ button.bg-black:hover {
     font-weight: 600;
     font-size: 1.05rem;
     color: #f0f0f0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.detail-subtitle, .detail-period {
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .detail-subtitle {
@@ -856,29 +830,24 @@ button.bg-black:hover {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .service-content p {
     color: #bbb;
     font-size: 0.95rem;
     line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-/* Special styling for the icon text elements in the services section */
 .service-item i {
     transition: transform 0.3s ease;
 }
 
-.service-item:hover i {
-    transform: translateY(-2px);
-}
-
-/* Last service item should not have a border */
 .service-item:last-child::after {
     display: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -895,3 +864,43 @@ button.bg-black:hover {
         margin-bottom: 1.5rem;
     }
 }
+
+.skills-table {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.skill-title {
+    font-weight: 600;
+    margin: 0.75rem 0 0.5rem 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.25rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.skill-pill {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+    color: #e6e6e6;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', monospace;
+}
+
