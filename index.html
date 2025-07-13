@@ -31,7 +31,7 @@
                             <i class="fab fa-facebook"></i>
                         </a>
                         <a href="#" class="social-button">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-discord"></i>
                         </a>
                 </div>
             </div>
@@ -40,16 +40,16 @@
     </div>
     <div class="max-w-5xl mx-auto">
         <!-- Main Banner Section -->
-        <div class="note-paper mb-8" id="home">
-            <div class="banner-stripe">
-                <div class="nav-dots">
-                    <span class="dot-red"></span>
-                    <span class="dot-yellow"></span>
-                    <span class="dot-green"></span>
+        <div class="terminal-container" id="home">
+            <div class="terminal-header">
+                <div class="term-dots">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
                 </div>
-                <div class="text-sm">profile.txt</div>
+                <div class="term-title">profile.txt</div>
             </div>
-            <div class="p-6 pb-8">
+            <div class="terminal-content p-6 pb-8">
                 <!-- About Section Redesigned -->
                 <div class="about-section">
                     <div class="about-header">
@@ -137,17 +137,212 @@
             </div>
         </div>
         
-        <!-- Services Offered -->
-        <div class="note-paper mb-8" id="services">
-            <div class="banner-stripe">
-                <div class="nav-dots">
-                    <span class="dot-red"></span>
-                    <span class="dot-yellow"></span>
-                    <span class="dot-green"></span>
-                </div>
-                <div class="text-sm">services.txt</div>
+        <!-- Certificate Carousel Section -->
+        <div class="certificates-section max-w-5xl mx-auto my-8">
+            <div class="section-header mb-4">
+                <h2 class="section-title">CERTIFICATES</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="p-6 pb-8">
+            
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- First set of certificates -->
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="qa">
+                                <img src="data/Quality Assurance.png" alt="Certificate 1" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Quality Assurance</h3>
+                                    <p>FreeCodeCamp</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="skillfront">
+                                <img src="data/SkillFront-SFE016bde0f4c69b-11743803966467.png" alt="Certificate 2" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Skillfront ISO/IEC 27001:2022 Information Security Associate</h3>
+                                    <p>Skillfront</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ai-course">
+                                <img src="data/Mircosoft AI Course.png" alt="Certificate 3" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Microsoft Artificial Intelligence Course (Azure AI Fundamentals)</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="graphic-design">
+                                <img src="data/Introduction to Visual Graphic Design.png" alt="Certificate 4" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Introduction to Visual Graphic Design</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ui-design">
+                                <img src="data/Developing Designs for User Interface.png" alt="Certificate 5" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Developing Designs for User Interface</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ux-design">
+                                <img src="data/Developing Designs for User Experience.png" alt="Certificate 6" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Developing Designs for User Experience</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="css-intro">
+                                <img src="data/Intro-to-CSS.png" alt="Certificate 7" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Introduction to CSS</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="android-dev">
+                                <img src="data/SMART Android Mobile Apps Development for Beginners.png" alt="Certificate 8" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>SMART Android Mobile Apps Development for Beginners</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="technopreneurship">
+                                <img src="data/SMART Technopreneurship 101.png" alt="Certificate 9" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>SMART Technopreneurship 101</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Duplicate set for infinite loop -->
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="qa">
+                                <img src="data/Quality Assurance.png" alt="Certificate 1" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Quality Assurance</h3>
+                                    <p>FreeCodeCamp</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="skillfront">
+                                <img src="data/SkillFront-SFE016bde0f4c69b-11743803966467.png" alt="Certificate 2" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Skillfront ISO/IEC 27001:2022 Information Security Associate</h3>
+                                    <p>Skillfront</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ai-course">
+                                <img src="data/Mircosoft AI Course.png" alt="Certificate 3" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Microsoft Artificial Intelligence Course (Azure AI Fundamentals)</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="graphic-design">
+                                <img src="data/Introduction to Visual Graphic Design.png" alt="Certificate 4" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Introduction to Visual Graphic Design</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ui-design">
+                                <img src="data/Developing Designs for User Interface.png" alt="Certificate 5" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Developing Designs for User Interface</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="ux-design">
+                                <img src="data/Developing Designs for User Experience.png" alt="Certificate 6" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Developing Designs for User Experience</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="css-intro">
+                                <img src="data/Intro-to-CSS.png" alt="Certificate 7" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>Introduction to CSS</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="android-dev">
+                                <img src="data/SMART Android Mobile Apps Development for Beginners.png" alt="Certificate 8" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>SMART Android Mobile Apps Development for Beginners</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <div class="certificate-card" data-certificate="technopreneurship">
+                                <img src="data/SMART Technopreneurship 101.png" alt="Certificate 9" class="certificate-image">
+                                <div class="certificate-details">
+                                    <h3>SMART Technopreneurship 101</h3>
+                                    <p>TESDA Online Program</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-container" id="services">
+            <div class="terminal-header">
+                <div class="term-dots">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                </div>
+                <div class="term-title">services.txt</div>
+            </div>
+            <div class="terminal-content p-6 pb-8">
                 <div class="services-section">
                     <div class="services-header">
                         <h2 class="section-title">SERVICES</h2>
@@ -210,53 +405,8 @@
         </div>
         
         <!-- Projects Section -->
-        <div class="note-paper" id="projects">
-            <div class="banner-stripe">
-                <div class="nav-dots">
-                    <span class="dot-red"></span>
-                    <span class="dot-yellow"></span>
-                    <span class="dot-green"></span>
-                </div>
-                
-                <div class="filter-container">
-                    <div class="filter-button">
-                        <span>All Projects</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="filter-dropdown">
-                        <div class="filter-option selected" data-filter="all">
-                            <i class="fas fa-th-large filter-icon"></i> All Projects
-                        </div>
-                        <div class="filter-option" data-filter="Web App">
-                            <i class="fas fa-globe filter-icon"></i> Web App
-                        </div>
-                        <div class="filter-option" data-filter="Desktop App">
-                            <i class="fas fa-desktop filter-icon"></i> Desktop App
-                        </div>
-                        <div class="filter-option" data-filter="Mobile App">
-                            <i class="fas fa-mobile-alt filter-icon"></i> Mobile App
-                        </div>
-                        <div class="filter-option" data-filter="Passion Project">
-                            <i class="fas fa-heart filter-icon"></i> Passion Project
-                        </div>
-                        <div class="filter-option" data-filter="Templates">
-                            <i class="fas fa-copy filter-icon"></i> Templates
-                        </div>
-                        <div class="filter-option" data-filter="Basic Training Project">
-                            <i class="fas fa-code filter-icon"></i> Basic Training Project
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p-6">
-                <div class="projects-header">
-                    <h2 class="section-title">PROJECT HIGHLIGHTS</h2>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-container">
-                    <!-- Projects will be inserted here by JavaScript -->
-                </div>
-            </div>
+        <div id="projects">
+            <div id="projects-container"></div>
         </div>
     </div>
     
@@ -271,6 +421,25 @@
         <a href="#projects" class="tooltip" data-tip="Projects">
             <i class="fas fa-folder"></i>
         </a>
+    </div>
+    
+   
+    <div class="certificate-modal" id="certificateModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Certificate Title</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Certificate" class="modal-image">
+                <div class="modal-details">
+                    <div class="modal-issuer" id="modalIssuer">Issuer</div>
+                    <div class="modal-description" id="modalDescription">Certificate description goes here.</div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>
