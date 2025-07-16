@@ -5,7 +5,7 @@ const projects = [
         description: "Created as an output for our thesis; A chatbot system that provides answers to frequently asked questions about the university via Forward Neural Networks and Levenshtein Distance Algorithm as its fallback. It uses the univeristy's handbook as its training data. <br><br> NOTE: In this demo, the training data is not included due to privacy concerns. For an actual demo, please contact me.",
         category: "Web App",
         link: "#",
-        image: "", 
+        image: "data/GNG.png", 
         tags: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     },
     {
@@ -215,12 +215,9 @@ function processCommand(command, outputElement) {
                         <li><span class="command-keyword">ls</span> - List all projects</li>
                         <li><span class="command-keyword">ls web</span> - List Web App projects</li>
                         <li><span class="command-keyword">ls desktop</span> - List Desktop App projects</li>
-                        <li><span class="command-keyword">ls mobile</span> - List Mobile App projects</li>
-                        <li><span class="command-keyword">ls passion</span> - List Passion Projects</li>
                         <li><span class="command-keyword">ls templates</span> - List Template projects</li>
                         <li><span class="command-keyword">ls training</span> - List Basic Training Projects</li>
                         <li><span class="command-keyword">open [project-name]</span> - Open a specific project</li>
-                        <li><span class="command-keyword">about</span> - About this terminal</li>
                         <li><span class="command-keyword">clear</span> - Clear the terminal</li>
                     </ul>
                 </div>
@@ -233,8 +230,6 @@ function processCommand(command, outputElement) {
                 const categoryArg = args[0].toLowerCase();
                 if (categoryArg === 'web') category = 'Web App';
                 else if (categoryArg === 'desktop') category = 'Desktop App';
-                else if (categoryArg === 'mobile') category = 'Mobile App';
-                else if (categoryArg === 'passion') category = 'Passion Project';
                 else if (categoryArg === 'templates') category = 'Templates';
                 else if (categoryArg === 'training') category = 'Basic Training Project';
             }
@@ -258,7 +253,7 @@ function processCommand(command, outputElement) {
                     <div class="project-action">
                         <span class="prompt">mike@portfolio:~$ </span>
                         <span class="command">open ${project.title.toLowerCase().replace(/\s+/g, '-')}</span>
-                        <a href="${project.link}" class="action-link">VIEW</a>
+                        <button class="action-link" onclick="openProjectModal('${project.title.replace(/'/g, "\\'")}', '${project.description.replace(/'/g, "\\'")}', '${project.category}', '${project.link}', '${project.tags.join(', ')}', '${project.image}')">VIEW</button>
                     </div>
                 </div>`;
             });
@@ -289,7 +284,7 @@ function processCommand(command, outputElement) {
                                 ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
                             </div>
                             <div class="project-action">
-                                <a href="${project.link}" class="action-link">VIEW PROJECT</a>
+                                <button class="action-link" onclick="openProjectModal('${project.title.replace(/'/g, "\\'")}', '${project.description.replace(/'/g, "\\'")}', '${project.category}', '${project.link}', '${project.tags.join(', ')}', '${project.image}')">VIEW PROJECT</button>
                             </div>
                         </div>
                     </div>
@@ -300,16 +295,6 @@ function processCommand(command, outputElement) {
             } else {
                 outputElement.innerHTML += `<div class="command-output error">Error: Project '${args.join(' ')}' not found</div>`;
             }
-            break;
-            
-        case 'about':
-            outputElement.innerHTML += `
-                <div class="command-output">
-                    <p>Project Terminal v1.0</p>
-                    <p>Created by Mike Jomari Rivera</p>
-                    <p>This terminal provides an interactive way to explore my portfolio projects.</p>
-                </div>
-            `;
             break;
             
         case 'clear':
@@ -326,6 +311,99 @@ function processCommand(command, outputElement) {
         setTimeout(() => {
             terminalBody.scrollTop = terminalBody.scrollHeight;
         }, 10);
+    }
+}
+
+// Project Modal functionality
+function openProjectModal(title, description, category, link, tags, image) {
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('projectModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'projectModal';
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-overlay">
+                <div class="modal-content project-modal-content">
+                    <div class="modal-header">
+                        <h2 id="projectModalTitle"></h2>
+                        <button id="projectModalClose" class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="project-modal-image-container">
+                            <img id="projectModalImage" class="project-modal-image" src="" alt="Project Preview" />
+                        </div>
+                        <div class="project-modal-category">
+                            <span id="projectModalCategory"></span>
+                        </div>
+                        <div class="project-modal-description">
+                            <p id="projectModalDescription"></p>
+                        </div>
+                        <div class="project-modal-tags">
+                            <span class="tags-label">Technologies:</span>
+                            <div id="projectModalTags"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a id="projectModalLink" href="#" target="_blank" class="project-link-btn">View Live Project</a>
+                        <button onclick="closeProjectModal()" class="modal-btn secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Add event listeners
+        const modalClose = document.getElementById('projectModalClose');
+        modalClose.addEventListener('click', closeProjectModal);
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                closeProjectModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeProjectModal();
+            }
+        });
+    }
+    
+    // Populate modal with project data
+    document.getElementById('projectModalTitle').textContent = title;
+    document.getElementById('projectModalDescription').innerHTML = description;
+    document.getElementById('projectModalCategory').textContent = category;
+    document.getElementById('projectModalLink').href = link;
+    
+    // Handle image
+    const imageElement = document.getElementById('projectModalImage');
+    const imageContainer = document.querySelector('.project-modal-image-container');
+    if (image && image.trim() !== '') {
+        imageElement.src = image;
+        imageElement.alt = `${title} Preview`;
+        imageContainer.style.display = 'block';
+    } else {
+        imageContainer.style.display = 'none';
+    }
+    
+    // Handle tags
+    const tagsContainer = document.getElementById('projectModalTags');
+    const tagsArray = tags.split(', ');
+    tagsContainer.innerHTML = tagsArray.map(tag => `<span class="project-modal-tag">${tag}</span>`).join('');
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent body scroll
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore body scroll
     }
 }
 
